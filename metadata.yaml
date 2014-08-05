@@ -1,0 +1,15 @@
+name: filtered-websocket
+summary: Install a simple WebSocket broadcast server 
+maintainer: Morgan Reece Phillips <winter2718@gmail.com> 
+description: |
+    Filtered Websocket is a server framework with a default implementation which acts as a broadcast server.
+    This charm installs that default implementation as a service.
+categories:
+  - misc
+subordinate: false
+provides:
+  provides-relation:
+    interface: websocket-server
+peers:
+  peer-relation:
+    interface: redis-master

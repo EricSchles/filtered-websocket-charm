@@ -1,0 +1,8 @@
+{
+    "port": "{{ port }}",
+    "filters": ["filtered_websocket.filters.broadcast_messages", "filtered_websocket.filters.broadcast_pubsub"]
+{% if storage_object_module == "filtered_websocket.storage_objects.redis" %}
+    "redis_port": {{ redis_port }}
+    "redis_host": {{ redis_host }}
+{% endif %}
+}

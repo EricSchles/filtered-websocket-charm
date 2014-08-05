@@ -1,0 +1,9 @@
+options:
+  string-option:
+    type: string
+    default: "default"
+    description: "Storage object module (e.x. filtered_websocket.storage_objects.redis)"
+  int-option:
+    type: int
+    default: 9000
+    description: "Server listening port."
