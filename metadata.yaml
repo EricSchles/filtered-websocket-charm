@@ -8,8 +8,9 @@ categories:
   - misc
 subordinate: false
 provides:
-  provides-relation:
-    interface: websocket-server
-peers:
-  peer-relation:
+  app-server:
+    interface: websocket
+requires:
+  database:
+    optional: true
     interface: redis-master

@@ -43,15 +43,15 @@
         - start
         - config-changed
     
-    - name: Start fws_server
-      service: name={{ daemon }} 
-               state=running
+    - name: "Install {{ daemon }} as a startup service"
+      command: update-rc.d {{ daemon }} defaults
       tags:
         - start
         - config-changed
-
-    - name: "Install {{ daemon }} as a startup service"
-      command: update-rc.d {{ daemon }} defaults
+    
+    - name: Start fws_server
+      service: name={{ daemon }} 
+               state=running
       ignore_errors: true
       tags:
         - start
